@@ -2,7 +2,8 @@
   <form>
     <label for="first-name">First Name:</label></label><input v-model="firstName" name="first-name" placeholder="User First Name" />
     <label for="last-name">Last Name:</label><input v-model="lastName" name="last-name" placeholder="User Last Name" />
-    <label for="date-of-birth">DOB:</label><input v-model="dateOfBirth" name="date-of-birth" placeholder="User Last Name" />
+    <DateComponent></DateComponent>
+    <!-- <label for="date-of-birth">DOB:</label><input v-model="dateOfBirth" name="date-of-birth" placeholder="User Last Name" /> -->
 
 
     <button name="submit-button" v-on:click="addUser">Add New Person</button>
@@ -17,6 +18,8 @@
 
 
 <script>
+  import Chat from './DateComponent.vue';
+  import {Session} from 'meteor/session';
   export default {
     name: 'page',
     data: () => ({
@@ -48,6 +51,9 @@
       removeUser(_id) {
         Meteor.call('addUser', _id);
       },
+    },
+    components: {
+      DateComponent,
     },
   };
 </script>
