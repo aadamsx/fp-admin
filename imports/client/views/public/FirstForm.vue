@@ -18,7 +18,7 @@
 
 
 <script>
-  import Chat from './DateComponent.vue';
+  import DateComponent from './DateComponent.vue';
   import {Session} from 'meteor/session';
   export default {
     name: 'page',
