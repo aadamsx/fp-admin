@@ -1,7 +1,7 @@
 <template>
   <div>
     <label fv-if="label">{{ label }}</label>
-    <input
+    <input type="text"
       ref="input"
       v-bind:value="value"
       v-on:input="updateValue($event.target.value)"

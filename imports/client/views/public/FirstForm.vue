@@ -30,7 +30,6 @@
 
     data: () => ({
       firstNameLabel: 'First Name:',
-      firstNamePlaceholder: 'Enter User First Name',
       LastNameLabel: 'Last Name:',
       dobDateLabel: 'Date of Birth:',
       submitLabel: 'Add New Person',
