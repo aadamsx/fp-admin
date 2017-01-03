@@ -1,7 +1,7 @@
 <template>
   <div>
     <label for="">{{label}}</label>
-    <input ref="input" type="date" v-bind:value="value" v-on:input="updateValue($event.target.value)"/>
+    <input ref="input" type="date" v-bind:value="value" v-on:input="updateValue($event.target.value)" />
   </div>
 </template>
 
@@ -11,7 +11,7 @@
     props: ['label', 'value'],
     methods: {
       updateValue: function (value) {
-        var formattedValue = value;
+        var formattedValue = value.trim();
         // remove whitespace on either slide
           // .trim()
 

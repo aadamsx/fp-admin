@@ -1,8 +1,9 @@
 <template>
   <form>
-    <label for="first-name">First Name:</label></label><input v-model="firstName" name="first-name" placeholder="User First Name" />
-    <label for="last-name">Last Name:</label><input v-model="lastName" name="last-name" placeholder="User Last Name" />
-    <date :label="dobDateLabel" v-model="dob"></date>
+    <text-input :label="firstNameLabel" v-model="firstName"></text-input>
+    <text-input :label="LastNameLabel" v-model="lastName"></text-input>
+    <dateControl :label="dobDateLabel" v-model="dob"></dateControl>
+
     <submitBtn :lable="submitLabel" @click="addUser"></submitBtn>
 
     <div v-for="usr in users">
@@ -20,13 +21,18 @@
   import {reverse, filterBy, findBy} from './filters.js'
 
   // components
-  import date from './DateComp.vue';
+  import dateControl from './inputDate.vue';
+  import textInput from './TextInput.vue';
   import submitBtn from './SubmitBtnComp.vue';
 
   export default {
     name: 'firstform',
+
     data: () => ({
-      dobDateLabel: 'Date of Birth',
+      firstNameLabel: 'First Name:',
+      firstNamePlaceholder: 'Enter User First Name',
+      LastNameLabel: 'Last Name:',
+      dobDateLabel: 'Date of Birth:',
       submitLabel: 'Add New Person',
       dob: '',
       newUser: '',
@@ -54,7 +60,7 @@
         Meteor.call('addUser', this.firstName, this.lastName, this.dob);
         this.firstName = '';
         this.lastName = '';
-        this.dateOfBirth = '';
+        this.dob = '';
       },
       removeUser(_id) {
         Meteor.call('addUser', _id);
@@ -62,7 +68,8 @@
     },
 
     components: {
-      date,
+      dateControl,
+      textInput,
       submitBtn
     },
   };
