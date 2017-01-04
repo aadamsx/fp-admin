@@ -1,21 +1,19 @@
-import '/imports/client/router.js';
 import Vue from 'vue';
 import VueMeteorTracker from 'vue-meteor-tracker'
-// import { Router, nativeScrollBehavior } from 'meteor/akryum:vue-router2';
-import Router from 'vue-router'
+import VueRouter from 'vue-router'
 import AppLayout from '/imports/client/views/AppLayout.vue';
+import Routes from '/imports/client/router.js';
 
-const router = new Router({
-  mode: 'history',
-  scrollBehavior: nativeScrollBehavior,
+const router = new VueRouter({
+  Routes
 });
 
 Meteor.startup(() => {
   Vue.use(VueMeteorTracker);
-  Vue.use(Router);
+  Vue.use(VueRouter);
 
-  new Vue({
-      router: router.start(),
+  const app = new Vue({
+      router: router,
       render: h => h(AppLayout),
   }).$mount('app');
 });

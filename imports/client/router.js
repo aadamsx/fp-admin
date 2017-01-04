@@ -1,61 +1,19 @@
-// import { Router } from 'meteor/akryum:vue-router2';
-import Router from 'vue-router'
-
-import Index from '/imports/client/views/public/Index.vue';
 import Page from '/imports/client/views/public/Page.vue';
 import FirstForm from '/imports/client/views/public/FirstForm.vue';
 
-// Not found
-import NotFound from '/imports/client/views/public/NotFound.vue';
+// 1. Define route components.
+// These can be imported from other files
+const NotFound = { template: '<div><h1>Not Found</h1></div>' }
+const Index = { template: '<div>Home</div>' }
 
-Router.map({
-  // Not found handler
-  '*': {
-    component: {
-        template:
-        '<div>' +
-        '<h1>Not Found</h1>' +
-        '</div>'
-    }
-  },
-  '/': {
-    component: Index
-  },
-  '/page': {
-    component: Page
-  },
-  '/first-form': {
-    component: FirstForm
-  },
-  '/not-found': {
-    component: NotFound
-  }
-});
-
-// Router.configure(router => {
-//   router.addRoutes([{
-//     path: "/",
-//     name: "Index",
-//     components: {
-//       default: Index,
-//     }
-//   }, {
-//     path: "/page",
-//     name: "Page",
-//     components: {
-//       default: Page,
-//     }
-//   }, {
-//     path: "/first-form",
-//     name: "FirstForm",
-//     components: {
-//       default: FirstForm,
-//     }
-//   }, {
-//     path: "/not-found",
-//     name: "NotFound",
-//     components: {
-//       default: NotFound,
-//     }
-//   },]);
-// });
+// 2. Define some routes
+// Each route should map to a component. The "component" can
+// either be an actual component constructor created via
+// Vue.extend(), or just a component options object.
+// We'll talk about nested routes later.
+export const routes = [
+  { path: '*', component: NotFound }, // Not Found handler
+  { path: '/', component: Index },
+  { path: '/page', component: Page },
+  { path: '/first-form', component: FirstForm  }
+];
