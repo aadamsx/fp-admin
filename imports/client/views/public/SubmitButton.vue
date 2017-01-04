@@ -6,7 +6,7 @@
 
 <script>
   export default {
-    // name: 'submitBtnComp',
+    name: 'submit-button',
     props: ['label'],
     methods: {
       handleClick() {

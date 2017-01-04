@@ -4,7 +4,7 @@
     <text-input :label="LastNameLabel" v-model="lastName"></text-input>
     <dateControl :label="dobDateLabel" v-model="dob"></dateControl>
 
-    <submitBtn :lable="submitLabel" @click="addUser"></submitBtn>
+    <submit-button :lable="submitLabel" @click="addUser"></submit-button>
 
     <div v-for="usr in users">
       <span>{{ usr.firstName }}, {{ usr.lastName }} : {{ usr.dobDate }}</span>
@@ -23,7 +23,7 @@
   // components
   import dateControl from './inputDate.vue';
   import textInput from './TextInput.vue';
-  import submitBtn from './SubmitBtnComp.vue';
+  import submitButton from './SubmitButton.vue';
 
   export default {
     name: 'firstform',
@@ -69,7 +69,7 @@
     components: {
       dateControl,
       textInput,
-      submitBtn
+      submitButton
     },
   };
 </script>
