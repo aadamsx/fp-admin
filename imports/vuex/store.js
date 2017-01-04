@@ -1,4 +1,4 @@
-// import {StoreModule} from 'meteor/akryum:vuex';
+// import { StoreModule } from 'vuex';
 //
 // const root = new StoreModule();
 //
