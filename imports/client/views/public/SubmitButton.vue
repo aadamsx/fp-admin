@@ -1,12 +1,12 @@
 <template>
   <div class="button" @click="handleClick">
-    <span class="label">{{label}}</span>
+    <span class="label">{{ label }}</span>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'submit-button',
+    // name: 'submit-button',
     props: ['label'],
     methods: {
       handleClick() {

@@ -12,7 +12,7 @@
 
 <script>
   export default {
-    name: 'text-input',
+    // name: 'text-input',
     props: {
       value: {
         type: String,

@@ -2,9 +2,9 @@
   <div>
     <input v-model="newPerson" @keyup.enter="addPerson" placeholder="Enter new Person Name" />
 
-    <div v-if="!$subReady.people">
+    <!-- <div v-if="!$subReady.people">
       Loading...
-    </div>
+    </div> -->
 
     <div class="people" v-for="ppl in peoples">
       <span class="content">{{ ppl.person }}</span>

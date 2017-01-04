@@ -4,7 +4,7 @@
     <text-input :label="LastNameLabel" v-model="lastName"></text-input>
     <dateControl :label="dobDateLabel" v-model="dob"></dateControl>
 
-    <submit-button :lable="submitLabel" @click="addUser"></submit-button>
+    <submit-button :label="submitLabel" @click="addUser"></submit-button>
 
     <div v-for="usr in users">
       <span>{{ usr.firstName }}, {{ usr.lastName }} : {{ usr.dobDate }}</span>
