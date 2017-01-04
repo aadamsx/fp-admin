@@ -26,7 +26,7 @@
   import submitButton from './SubmitButton.vue';
 
   export default {
-    name: 'firstform',
+    // name: 'FirstForm',
 
     data: () => ({
       firstNameLabel: 'First Name:',

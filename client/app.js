@@ -2,10 +2,11 @@ import Vue from 'vue';
 import VueMeteorTracker from 'vue-meteor-tracker'
 import VueRouter from 'vue-router'
 import AppLayout from '/imports/client/views/AppLayout.vue';
-import Routes from '/imports/client/router.js';
+import {Routes} from '/imports/client/router.js';
 
 const router = new VueRouter({
-  Routes
+  mode: 'history',
+  routes: Routes
 });
 
 Meteor.startup(() => {

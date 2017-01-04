@@ -16,7 +16,7 @@
 
 <script>
   export default {
-    name: 'page',
+    name: 'Page',
     data: () => ({
       newPerson: '',
       peoples: []
