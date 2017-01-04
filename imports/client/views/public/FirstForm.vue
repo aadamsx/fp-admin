@@ -37,6 +37,7 @@
       newUser: '',
       firstName: '',
       lastName: '',
+      // users: [{firstName: 'test', lastName: 'test', dobDate: 'test'}]
       users: []
     }),
 
