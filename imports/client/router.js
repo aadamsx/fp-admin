@@ -12,8 +12,8 @@ const Index = { template: '<div>Home</div>' }
 // Vue.extend(), or just a component options object.
 // We'll talk about nested routes later.
 export const routes = [
-  { path: '*', component: NotFound }, // Not Found handler
   { path: '/', component: Index },
   { path: '/page', component: Page },
-  { path: '/first-form', component: FirstForm  }
+  { path: '/first-form', component: FirstForm  },
+  { path: '*', component: NotFound } // Not Found handler
 ];
