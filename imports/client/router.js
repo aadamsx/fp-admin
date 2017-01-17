@@ -5,5 +5,6 @@ const Index = { template: '<div>Home</div>', name: 'Index' }
 
 export const routes = [
   { path: '/', name: 'Index', component: Index },
-  { path: '/first-form', name: 'FirstForm', component: FirstForm }//,
+  { path: '/first-form', name: 'FirstForm', component: FirstForm },
+  { path: '*', name: 'NotFound', component: NotFound } // Not Found handler
 ];

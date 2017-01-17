@@ -10,8 +10,33 @@ import VueMeteorTracker from 'vue-meteor-tracker';
 import AppLayout from '/imports/client/views/AppLayout.vue';
 import { routes } from '/imports/client/router.js';
 
+import VueMask from 'v-mask'
+// import VueHtml5Editor from 'vue-html5-editor';
+
+
 Vue.use(VueMeteorTracker);
 Vue.use(VueRouter);
+Vue.use(VueMask);
+// Vue.use(VueHtml5Editor, {name: 'vue-html5-editor',
+//   //keep only the modules you want and customize the order.
+//   //can be used with hiddenModules together
+//   visibleModules: [
+//       "text",
+//       "color",
+//       "font",
+//       "align",
+//       "list",
+//       "link",
+//       "unlink",
+//       "tabulation",
+//       "image",
+//       "hr",
+//       "eraser",
+//       "undo",
+//       "full-screen",
+//       "info",
+//   ]}
+// );
 
 // const store = new Vuex.Store(VuexStore)
 

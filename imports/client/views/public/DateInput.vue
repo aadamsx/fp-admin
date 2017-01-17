@@ -5,6 +5,8 @@
     </label>
 
     <input type="text"
+      v-mask="'##/##/####'"
+      placeholder="mm/dd/yyyy"
       v-bind:class="cssTextInput"
       v-bind:value="value"
       v-on:input="onInputChange"
@@ -17,7 +19,7 @@
 
 <script>
   export default {
-    name: 'text-input',
+    name: 'date-input',
     props: {
       value: {
         type: String,
